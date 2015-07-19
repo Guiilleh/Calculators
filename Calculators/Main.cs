@@ -67,14 +67,35 @@ namespace Calculators
         #endregion
 
         #region Hide and Show Label1
-        private void MainForm_Click(object sender, EventArgs e)
+
+        public void label_ON()
         {
             label1.Visible = true;
         }
 
-        private void MainForm_DoubleClick(object sender, EventArgs e)
+        public void label_OFF()
         {
             label1.Visible = false;
+        }
+    
+        private void MainForm_Click(object sender, EventArgs e)
+        {
+            label_ON();
+        }
+
+        private void MainForm_DoubleClick(object sender, EventArgs e)
+        {
+            label_OFF();
+        }
+
+        private void ObjectMouseHover_IN(object sender, EventArgs e)
+        {
+            label_ON();
+        }
+
+        private void ObjectMouseHover_OUT(object sender, EventArgs e)
+        {
+            label_OFF();
         }
         #endregion
     }

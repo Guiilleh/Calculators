@@ -56,6 +56,8 @@
             this.BGrades.UseVisualStyleBackColor = true;
             this.BGrades.Click += new System.EventHandler(this.BGrades_Click);
             this.BGrades.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCClose_KeyDown);
+            this.BGrades.MouseLeave += new System.EventHandler(this.ObjectMouseHover_OUT);
+            this.BGrades.MouseHover += new System.EventHandler(this.ObjectMouseHover_IN);
             // 
             // BEquation
             // 
@@ -67,6 +69,8 @@
             this.BEquation.UseVisualStyleBackColor = true;
             this.BEquation.Click += new System.EventHandler(this.BEquation_Click);
             this.BEquation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCClose_KeyDown);
+            this.BEquation.MouseLeave += new System.EventHandler(this.ObjectMouseHover_OUT);
+            this.BEquation.MouseHover += new System.EventHandler(this.ObjectMouseHover_IN);
             // 
             // test1
             // 
@@ -78,6 +82,8 @@
             this.test1.UseVisualStyleBackColor = true;
             this.test1.Click += new System.EventHandler(this.test1_Click);
             this.test1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCClose_KeyDown);
+            this.test1.MouseLeave += new System.EventHandler(this.ObjectMouseHover_OUT);
+            this.test1.MouseHover += new System.EventHandler(this.ObjectMouseHover_IN);
             // 
             // MainForm
             // 

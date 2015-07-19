@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace Calculators
 {
@@ -30,7 +31,7 @@ namespace Calculators
                 {
                     corte1.Text = "20";
                 }
-                else if (corte01 < 0)
+                else if (corte01 <= 0)
                 {
                     corte1.Text = "0";
                 }
@@ -86,7 +87,8 @@ namespace Calculators
         #endregion
         
         #region KeyDown Methods
-        private void KeyDown01(object sender, KeyEventArgs e)
+
+        private void KeyDown01(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -96,14 +98,23 @@ namespace Calculators
             {
                 int asd1 = Int32.Parse(corte1.Text) + 1;
                 corte1.Text = asd1 + "";
-            }
+            } 
             else if (e.KeyCode == Keys.Down)
             {
-                int asd1 = Int32.Parse(corte1.Text) - 1;
-                corte1.Text = asd1 + "";
+                int asd1 = Int32.Parse(corte1.Text);
+                if (asd1 == 0)
+                {
+                    int qwe1 = 0;
+                    corte1.Text = qwe1 + "";
+                }
+                else if (asd1 > 0)
+                {
+                    int ert1 = asd1 - 1;
+                    corte1.Text = ert1 + "";
+                }
             }
         }
-        private void KeyDown02(object sender, KeyEventArgs e)
+        private void KeyDown02(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -116,11 +127,21 @@ namespace Calculators
             }
             else if (e.KeyCode == Keys.Down)
             {
-                int asd2 = Int32.Parse(corte2.Text) - 1;
-                corte2.Text = asd2 + "";
+                int asd2 = Int32.Parse(corte2.Text);
+                if (asd2 == 0)
+                {
+                    int qwe2 = 0;
+                    corte2.Text = qwe2 + "";
+                }
+                else if (asd2 > 0)
+                {
+                    int ert2 = asd2 - 1;
+                    corte2.Text = ert2 + "";
+                }
+                
             }
         }
-        private void KeyDown03(object sender, KeyEventArgs e)
+        private void KeyDown03(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -133,15 +154,94 @@ namespace Calculators
             }
             else if (e.KeyCode == Keys.Down)
             {
-                int asd3 = Int32.Parse(corte3.Text) - 1;
-                corte3.Text = asd3 + "";
+                int asd3 = Int32.Parse(corte3.Text);
+                if (asd3 == 0)
+                {
+                    int qwe3 = 0;
+                    corte3.Text = qwe3 + "";
+                }
+                else if (asd3 > 0)
+                {
+                    int ert3 = asd3 - 1;
+                    corte3.Text = ert3 + "";
+                }
             }
         }
-        private void KeyDown040506(object sender, KeyEventArgs e)
+        private void KeyDown040506(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+        #endregion
+
+        #region MouseWheel Methods
+
+        private void corte1_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int asd1 = Int32.Parse(corte1.Text) + 1;
+                corte1.Text = asd1 + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int asd1 = Int32.Parse(corte1.Text);
+                if (asd1 == 0)
+                {
+                    int qwe1 = 0;
+                    corte1.Text = qwe1 + "";
+                }
+                else if (asd1 > 0)
+                {
+                    int ert1 = asd1 - 1;
+                    corte1.Text = ert1 + "";
+                }
+            }
+        }
+        private void corte2_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int asd2 = Int32.Parse(corte2.Text) + 1;
+                corte2.Text = asd2 + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int asd2 = Int32.Parse(corte2.Text);
+                if (asd2 == 0)
+                {
+                    int qwe2 = 0;
+                    corte2.Text = qwe2 + "";
+                }
+                else if (asd2 > 0)
+                {
+                    int ert2 = asd2 - 1;
+                    corte2.Text = ert2 + "";
+                }
+            }
+        }
+        private void corte3_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int asd3 = Int32.Parse(corte3.Text) + 1;
+                corte3.Text = asd3 + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int asd3 = Int32.Parse(corte3.Text);
+                if (asd3 == 0)
+                {
+                    int qwe3 = 0;
+                    corte3.Text = qwe3 + "";
+                }
+                else if (asd3 > 0)
+                {
+                    int ert3 = asd3 - 1;
+                    corte3.Text = ert3 + "";
+                }
             }
         }
         #endregion
@@ -152,6 +252,17 @@ namespace Calculators
             ToolTip TT = new ToolTip();
             TT.SetToolTip(this.corte1, "Primer corte de notas");
         }
+
+        private void MouseWheelHandler(object sender, MouseWheelEventArgs e)
+        {
+        if (e.Delta > 0)
+            {
+                int asd1 = Int32.Parse(corte1.Text) + 1;
+                corte1.Text = asd1 + "";
+            }
+        }
+
+        
         private void corte2_MouseHover(object sender, EventArgs e)
         {
             ToolTip TT = new ToolTip();

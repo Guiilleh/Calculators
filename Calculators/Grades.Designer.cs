@@ -101,6 +101,7 @@
             this.corte1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown01);
             this.corte1.Leave += new System.EventHandler(this.MainMGC1_Run);
             this.corte1.MouseHover += new System.EventHandler(this.corte1_MouseHover);
+            this.corte1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.corte1_MouseWH);
             // 
             // corte2
             // 
@@ -116,6 +117,7 @@
             this.corte2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown02);
             this.corte2.Leave += new System.EventHandler(this.MainMGC1_Run);
             this.corte2.MouseHover += new System.EventHandler(this.corte2_MouseHover);
+            this.corte2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.corte2_MouseWH);
             // 
             // corte3
             // 
@@ -131,6 +133,7 @@
             this.corte3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown03);
             this.corte3.Leave += new System.EventHandler(this.MainMGC1_Run);
             this.corte3.MouseHover += new System.EventHandler(this.corte3_MouseHover);
+            this.corte3.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.corte3_MouseWH);
             // 
             // result1
             // 
@@ -191,6 +194,7 @@
             this.Name = "Grades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculador de Notas";
+            this.Click += new System.EventHandler(this.MainMGC1_Run);
             this.ResumeLayout(false);
             this.PerformLayout();
 
