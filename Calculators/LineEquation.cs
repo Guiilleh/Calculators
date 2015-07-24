@@ -224,6 +224,63 @@ namespace Calculators
         }
         #endregion
 
+        #region MouseWheel Methods
+
+        private void x1_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int x941a = Int32.Parse(x1.Text) + 1;
+                x1.Text = x941a + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int x941b = Int32.Parse(x1.Text) - 1;
+                x1.Text = x941b + "";
+            }
+        }
+        private void y1_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int y941a = Int32.Parse(y1.Text) + 1;
+                y1.Text = y941a + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int y941b = Int32.Parse(y1.Text) - 1;
+                y1.Text = y941b + "";
+            }
+        }
+        private void x2_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int x942a = Int32.Parse(x2.Text) + 1;
+                x2.Text = x942a + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int x942b = Int32.Parse(x2.Text) - 1;
+                x2.Text = x942b + "";
+            }
+        }
+
+        private void y2_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int y942a = Int32.Parse(y2.Text) + 1;
+                y2.Text = y942a + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int y942b = Int32.Parse(y2.Text) - 1;
+                y2.Text = y942b + "";
+            }
+        }
+        #endregion
+
         #region ToolTips when hovering mouse
         private void x1_MouseHover(object sender, EventArgs e)
         {

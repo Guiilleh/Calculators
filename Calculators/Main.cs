@@ -78,24 +78,19 @@ namespace Calculators
             label1.Visible = false;
         }
     
-        private void MainForm_Click(object sender, EventArgs e)
-        {
-            label_ON();
-        }
-
-        private void MainForm_DoubleClick(object sender, EventArgs e)
-        {
-            label_OFF();
-        }
-
         private void ObjectMouseHover_IN(object sender, EventArgs e)
         {
-            label_ON();
+            timer1.Enabled = true;
         }
 
         private void ObjectMouseHover_OUT(object sender, EventArgs e)
         {
             label_OFF();
+        }
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label_ON();
         }
         #endregion
     }

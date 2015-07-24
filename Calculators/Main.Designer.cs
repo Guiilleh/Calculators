@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.BGrades = new System.Windows.Forms.Button();
             this.BEquation = new System.Windows.Forms.Button();
             this.test1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +87,11 @@
             this.test1.MouseLeave += new System.EventHandler(this.ObjectMouseHover_OUT);
             this.test1.MouseHover += new System.EventHandler(this.ObjectMouseHover_IN);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 2000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,8 +108,6 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculators";
-            this.Click += new System.EventHandler(this.MainForm_Click);
-            this.DoubleClick += new System.EventHandler(this.MainForm_DoubleClick);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCClose_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,5 +120,6 @@
         private System.Windows.Forms.Button BGrades;
         private System.Windows.Forms.Button BEquation;
         private System.Windows.Forms.Button test1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

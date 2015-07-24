@@ -124,6 +124,7 @@
             this.x1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.x1_KeyDown);
             this.x1.Leave += new System.EventHandler(this.MainMLE1_Run);
             this.x1.MouseHover += new System.EventHandler(this.x1_MouseHover);
+            this.x1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.x1_MouseWH);
             // 
             // y1
             // 
@@ -139,6 +140,7 @@
             this.y1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.y1_KeyDown);
             this.y1.Leave += new System.EventHandler(this.MainMLE1_Run);
             this.y1.MouseHover += new System.EventHandler(this.y1_MouseHover);
+            this.y1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.y1_MouseWH);
             // 
             // y2
             // 
@@ -154,6 +156,7 @@
             this.y2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.y2_KeyDown);
             this.y2.Leave += new System.EventHandler(this.MainMLE1_Run);
             this.y2.MouseHover += new System.EventHandler(this.y2_MouseHover);
+            this.y2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.y2_MouseWH);
             // 
             // x2
             // 
@@ -169,6 +172,7 @@
             this.x2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.x2_KeyDown);
             this.x2.Leave += new System.EventHandler(this.MainMLE1_Run);
             this.x2.MouseHover += new System.EventHandler(this.x2_MouseHover);
+            this.x2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.x2_MouseWH);
             // 
             // P2paranthesis
             // 
