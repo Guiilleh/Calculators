@@ -27,11 +27,10 @@ namespace Calculators
             }
             catch
             {
-                return;
-                /*MessageBox.Show("Sólo números",
+                MessageBox.Show("Sólo números",
                     "Atención",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);*/
+                    MessageBoxIcon.Exclamation);
             }
         }
         #endregion
@@ -90,14 +89,13 @@ namespace Calculators
         }
         #endregion
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (e.K)
-        }
-
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+            else if (e.KeyCode == Keys.Up)
             {
                 int asd1 = Int32.Parse(textBox1.Text) + 1;
                 textBox1.Text = asd1 + "";
@@ -106,6 +104,20 @@ namespace Calculators
             {
                 int asd1 = Int32.Parse(textBox1.Text) - 1;
                 textBox1.Text = asd1 + "";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int testa = Int32.Parse(multest.Text);
+            int testb = Int32.Parse(label2.Text);
+        }
+
+        private void button1_Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

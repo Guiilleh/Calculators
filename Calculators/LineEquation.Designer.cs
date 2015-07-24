@@ -287,9 +287,9 @@
             this.Divisor.TabIndex = 4;
             this.Divisor.Text = "1";
             this.Divisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Divisor.TextChanged += new System.EventHandler(this.MainMLE1_Run);
+            this.Divisor.TextChanged += new System.EventHandler(this.DivisorMLE1_1);
             this.Divisor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Divisor_KeyDown);
-            this.Divisor.Leave += new System.EventHandler(this.MainMLE1_Run);
+            this.Divisor.Leave += new System.EventHandler(this.DivisorMLE1_2);
             this.Divisor.MouseHover += new System.EventHandler(this.Divisor_MouseHover);
             // 
             // label32

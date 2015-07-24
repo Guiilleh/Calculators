@@ -17,42 +17,28 @@ namespace Calculators
             InitializeComponent();
         }
 
-        #region Buttons' Methods
-        public void MainM1()
+        #region Buttons' Methods n' Actions
+        public void BGrades_Click(object sender, EventArgs e)
         {
             this.Opacity = .7;
             Grades asd1 = new Grades();
             asd1.ShowDialog();
             this.Opacity = 100;
         }
-        public void MainM2()
+        private void BEquation_Click(object sender, EventArgs e)
         {
             this.Opacity = .7;
             LineEquation asd2 = new LineEquation();
             asd2.ShowDialog();
             this.Opacity = 100;
         }
-        public void Test1()
+        private void Test1_Click(object sender, EventArgs e)
         {
+            test1.Visible = false;
             this.Opacity = .7;
             Test asd3 = new Test();
             asd3.ShowDialog();
             this.Opacity = 100;
-        }
-        #endregion
-
-        #region Buttons' Actions
-        public void BGrades_Click(object sender, EventArgs e)
-        {
-            MainM1();
-        }
-        private void BEquation_Click(object sender, EventArgs e)
-        {
-            MainM2();
-        }
-        private void test1_Click(object sender, EventArgs e)
-        {
-            Test1();
         }
         #endregion
 
@@ -66,31 +52,38 @@ namespace Calculators
         }
         #endregion
 
-        #region Hide and Show Label1
-
-        public void label_ON()
+        #region Label1 Shit
+        private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Visible = true;
         }
-
-        public void label_OFF()
-        {
-            label1.Visible = false;
-        }
-    
-        private void ObjectMouseHover_IN(object sender, EventArgs e)
+        private void Buttons_MouseHover(object sender, EventArgs e)
         {
             timer1.Enabled = true;
         }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            int fadingSpeed = 12;
+            label1.ForeColor = Color.FromArgb(label1.ForeColor.R + fadingSpeed, label1.ForeColor.G + fadingSpeed, label1.ForeColor.B + fadingSpeed);
 
-        private void ObjectMouseHover_OUT(object sender, EventArgs e)
-        {
-            label_OFF();
+            if (label1.ForeColor.R >= this.BackColor.R)
+            {
+                timer1.Stop();
+                label1.ForeColor = this.BackColor;
+            }
         }
-        
-        private void timer1_Tick(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            label_ON();
+            if (test1.Visible == true)
+            {
+                test1.Visible = false;
+            }
+            else if (test1.Visible == false)
+            {
+                test1.Visible = true;
+                timer1.Enabled = false;
+                timer2.Enabled = true;
+            }
         }
         #endregion
     }
