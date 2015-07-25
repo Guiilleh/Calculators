@@ -89,6 +89,7 @@ namespace Calculators
         }
         #endregion
 
+        #region KeyDownMethods
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -107,18 +108,20 @@ namespace Calculators
             }
         }
 
+        #endregion
+
+        #region Plus or Minus
         private void button1_Click(object sender, EventArgs e)
         {
-            int testa = Int32.Parse(multest.Text);
-            int testb = Int32.Parse(label2.Text);
+            multest.Text = "";
+            label2.Text = "";
+            plusminus();
         }
-
-        private void button1_Enter(object sender, KeyEventArgs e)
+        
+        public void plusminus()
         {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Close();
-            }
+            return;
         }
+        #endregion
     }
 }

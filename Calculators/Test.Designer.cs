@@ -155,7 +155,7 @@
             this.multest.Name = "multest";
             this.multest.Size = new System.Drawing.Size(56, 20);
             this.multest.TabIndex = 15;
-            this.multest.Text = "8";
+            this.multest.Text = "7";
             this.multest.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.multest.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCClose_KeyDown);
             // 
