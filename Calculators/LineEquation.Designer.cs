@@ -78,6 +78,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.equal1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // P1
@@ -266,6 +267,7 @@
             this.Separator7.Size = new System.Drawing.Size(255, 2);
             this.Separator7.TabIndex = 44;
             this.Separator7.Text = "_";
+            this.Separator7.Visible = false;
             // 
             // label31
             // 
@@ -289,7 +291,7 @@
             this.Divisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Divisor.TextChanged += new System.EventHandler(this.DivisorMLE1_1);
             this.Divisor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Divisor_KeyDown);
-            this.Divisor.Leave += new System.EventHandler(this.DivisorMLE1_2);
+            this.Divisor.Leave += new System.EventHandler(this.MainMLE1_Run);
             this.Divisor.MouseHover += new System.EventHandler(this.Divisor_MouseHover);
             this.Divisor.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.Div_MouseWH);
             // 
@@ -582,12 +584,23 @@
             this.label4.TabIndex = 121;
             this.label4.Text = "=";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(25, 331);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 122;
+            this.button1.Text = "±";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LineEquation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(274, 492);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EQ2part4);
             this.Controls.Add(this.EQ2part3);
@@ -699,5 +712,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label equal1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
