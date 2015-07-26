@@ -291,6 +291,7 @@
             this.Divisor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Divisor_KeyDown);
             this.Divisor.Leave += new System.EventHandler(this.DivisorMLE1_2);
             this.Divisor.MouseHover += new System.EventHandler(this.Divisor_MouseHover);
+            this.Divisor.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.Div_MouseWH);
             // 
             // label32
             // 

@@ -55,7 +55,19 @@ namespace Calculators
         #region Label1 Shit
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Visible = true;
+            timer1b.Enabled = true;
+        }
+        private void timer1b_Tick(object sender, EventArgs e)
+        {
+            int apparitionSpeed = 10;
+            label1.ForeColor = Color.FromArgb(label1.ForeColor.R - apparitionSpeed, label1.ForeColor.G - apparitionSpeed, label1.ForeColor.B - apparitionSpeed);
+
+            if (label1.ForeColor.R == 10)
+            {
+                timer1.Stop();
+                timer1b.Stop();
+                timer2.Stop();
+            }
         }
         private void Buttons_MouseHover(object sender, EventArgs e)
         {
@@ -63,13 +75,15 @@ namespace Calculators
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            int fadingSpeed = 12;
+            int fadingSpeed = 10;
             label1.ForeColor = Color.FromArgb(label1.ForeColor.R + fadingSpeed, label1.ForeColor.G + fadingSpeed, label1.ForeColor.B + fadingSpeed);
 
             if (label1.ForeColor.R >= this.BackColor.R)
             {
                 timer1.Stop();
                 label1.ForeColor = this.BackColor;
+                timer1b.Stop();
+                timer2.Stop();
             }
         }
         private void label1_Click(object sender, EventArgs e)
@@ -86,5 +100,7 @@ namespace Calculators
             }
         }
         #endregion
+
+        
     }
 }

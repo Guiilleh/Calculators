@@ -800,6 +800,20 @@ namespace Calculators
                 y2.Text = y942b + "";
             }
         }
+
+        private void Div_MouseWH(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                int div94a = Int32.Parse(Divisor.Text) + 1;
+                Divisor.Text = div94a + "";
+            }
+            else if (e.Delta < 0)
+            {
+                int div94b = Int32.Parse(Divisor.Text) - 1;
+                Divisor.Text = div94b + "";
+            }
+        }
         #endregion
 
         #region ToolTips when hovering mouse

@@ -12,6 +12,9 @@ namespace Calculators
 {
     public partial class Test : Form
     {
+        int asereje = 0;
+        //int mult = Int32.Parse(multest.Text);
+
         public Test()
         {
             InitializeComponent();
@@ -113,15 +116,21 @@ namespace Calculators
         #region Plus or Minus
         private void button1_Click(object sender, EventArgs e)
         {
-            multest.Text = "";
+            if (asereje == 0 || (Convert.ToInt32(multest.Text) != asereje && Convert.ToInt32(multest.Text) != (asereje * -1))) {
+                asereje = Convert.ToInt32(multest.Text);
+            }
+            asereje *= -1;
+            label2.Text = asereje + "";
+            /*multest.Text = "";
             label2.Text = "";
-            plusminus();
+            plusminus();*/
         }
         
-        public void plusminus()
+        /*public void plusminus()
         {
             return;
-        }
+        }*/
         #endregion
+
     }
 }
