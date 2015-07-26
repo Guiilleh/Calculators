@@ -121,16 +121,7 @@ namespace Calculators
             }
             asereje *= -1;
             label2.Text = asereje + "";
-            /*multest.Text = "";
-            label2.Text = "";
-            plusminus();*/
         }
-        
-        /*public void plusminus()
-        {
-            return;
-        }*/
         #endregion
-
     }
 }
