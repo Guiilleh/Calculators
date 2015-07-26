@@ -67,6 +67,9 @@ namespace Calculators
                 timer1.Stop();
                 timer1b.Stop();
                 timer2.Stop();
+                timer1.Enabled = false;
+                timer1b.Enabled = false;
+                timer2.Enabled = false;
             }
         }
         private void Buttons_MouseHover(object sender, EventArgs e)
@@ -84,6 +87,9 @@ namespace Calculators
                 label1.ForeColor = this.BackColor;
                 timer1b.Stop();
                 timer2.Stop();
+                timer1.Enabled = false;
+                timer1b.Enabled = false;
+                timer2.Enabled = false;
             }
         }
         private void label1_Click(object sender, EventArgs e)

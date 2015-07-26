@@ -13,7 +13,6 @@ namespace Calculators
     public partial class Test : Form
     {
         int asereje = 0;
-        //int mult = Int32.Parse(multest.Text);
 
         public Test()
         {

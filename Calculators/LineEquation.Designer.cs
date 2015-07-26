@@ -334,6 +334,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.Enabled = false;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.Location = new System.Drawing.Point(55, 389);
             this.label38.Name = "label38";
@@ -341,16 +342,19 @@
             this.label38.TabIndex = 37;
             this.label38.Text = "Multiplicando todo por -1";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label38.Visible = false;
             // 
             // EQ8
             // 
             this.EQ8.AutoSize = true;
+            this.EQ8.Enabled = false;
             this.EQ8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ8.Location = new System.Drawing.Point(94, 421);
             this.EQ8.Name = "EQ8";
-            this.EQ8.Size = new System.Drawing.Size(57, 15);
+            this.EQ8.Size = new System.Drawing.Size(64, 15);
             this.EQ8.TabIndex = 91;
-            this.EQ8.Text = "X+Y+1=0";
+            this.EQ8.Text = "X+Y+C = 0";
+            this.EQ8.Visible = false;
             // 
             // EQ1part1
             // 
@@ -360,7 +364,7 @@
             this.EQ1part1.Name = "EQ1part1";
             this.EQ1part1.Size = new System.Drawing.Size(28, 15);
             this.EQ1part1.TabIndex = 92;
-            this.EQ1part1.Text = "Y+1";
+            this.EQ1part1.Text = "Y+0";
             // 
             // EQ3
             // 
@@ -368,9 +372,9 @@
             this.EQ3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ3.Location = new System.Drawing.Point(94, 172);
             this.EQ3.Name = "EQ3";
-            this.EQ3.Size = new System.Drawing.Size(57, 15);
+            this.EQ3.Size = new System.Drawing.Size(83, 15);
             this.EQ3.TabIndex = 94;
-            this.EQ3.Text = "X+Y+1=0";
+            this.EQ3.Text = "0Y +0 = 0X +0";
             // 
             // EQ4
             // 
@@ -378,9 +382,9 @@
             this.EQ4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ4.Location = new System.Drawing.Point(94, 215);
             this.EQ4.Name = "EQ4";
-            this.EQ4.Size = new System.Drawing.Size(57, 15);
+            this.EQ4.Size = new System.Drawing.Size(83, 15);
             this.EQ4.TabIndex = 95;
-            this.EQ4.Text = "X+Y+1=0";
+            this.EQ4.Text = "0X +0Y +0 = 0";
             // 
             // EQ5
             // 
@@ -388,9 +392,9 @@
             this.EQ5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ5.Location = new System.Drawing.Point(94, 255);
             this.EQ5.Name = "EQ5";
-            this.EQ5.Size = new System.Drawing.Size(57, 15);
+            this.EQ5.Size = new System.Drawing.Size(66, 15);
             this.EQ5.TabIndex = 96;
-            this.EQ5.Text = "X+Y+1=0";
+            this.EQ5.Text = "0X +0Y = 0";
             // 
             // EQ6
             // 
@@ -398,9 +402,9 @@
             this.EQ6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ6.Location = new System.Drawing.Point(94, 318);
             this.EQ6.Name = "EQ6";
-            this.EQ6.Size = new System.Drawing.Size(57, 15);
+            this.EQ6.Size = new System.Drawing.Size(76, 15);
             this.EQ6.TabIndex = 97;
-            this.EQ6.Text = "X+Y+1=0";
+            this.EQ6.Text = "0X 0Y +0 = 0";
             // 
             // EQ7
             // 
@@ -408,19 +412,21 @@
             this.EQ7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ7.Location = new System.Drawing.Point(94, 352);
             this.EQ7.Name = "EQ7";
-            this.EQ7.Size = new System.Drawing.Size(57, 15);
+            this.EQ7.Size = new System.Drawing.Size(59, 15);
             this.EQ7.TabIndex = 98;
-            this.EQ7.Text = "X+Y+1=0";
+            this.EQ7.Text = "0X 0Y = 0";
             // 
             // EQ9
             // 
             this.EQ9.AutoSize = true;
+            this.EQ9.Enabled = false;
             this.EQ9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EQ9.Location = new System.Drawing.Point(94, 458);
             this.EQ9.Name = "EQ9";
-            this.EQ9.Size = new System.Drawing.Size(57, 15);
+            this.EQ9.Size = new System.Drawing.Size(54, 15);
             this.EQ9.TabIndex = 99;
-            this.EQ9.Text = "X+Y+1=0";
+            this.EQ9.Text = "X+Y = -C";
+            this.EQ9.Visible = false;
             // 
             // EQ1part2
             // 
@@ -430,7 +436,7 @@
             this.EQ1part2.Name = "EQ1part2";
             this.EQ1part2.Size = new System.Drawing.Size(28, 15);
             this.EQ1part2.TabIndex = 100;
-            this.EQ1part2.Text = "1+1";
+            this.EQ1part2.Text = "0+0";
             // 
             // EQ1part3
             // 
@@ -440,7 +446,7 @@
             this.EQ1part3.Name = "EQ1part3";
             this.EQ1part3.Size = new System.Drawing.Size(28, 15);
             this.EQ1part3.TabIndex = 101;
-            this.EQ1part3.Text = "1+1";
+            this.EQ1part3.Text = "0+0";
             // 
             // EQ1part4
             // 
@@ -450,7 +456,7 @@
             this.EQ1part4.Name = "EQ1part4";
             this.EQ1part4.Size = new System.Drawing.Size(37, 15);
             this.EQ1part4.TabIndex = 102;
-            this.EQ1part4.Text = "(X+1)";
+            this.EQ1part4.Text = "(X+0)";
             // 
             // EQ2part3
             // 
@@ -460,7 +466,7 @@
             this.EQ2part3.Name = "EQ2part3";
             this.EQ2part3.Size = new System.Drawing.Size(14, 15);
             this.EQ2part3.TabIndex = 105;
-            this.EQ2part3.Text = "1";
+            this.EQ2part3.Text = "0";
             // 
             // EQ2part2
             // 
@@ -470,7 +476,7 @@
             this.EQ2part2.Name = "EQ2part2";
             this.EQ2part2.Size = new System.Drawing.Size(14, 15);
             this.EQ2part2.TabIndex = 104;
-            this.EQ2part2.Text = "1";
+            this.EQ2part2.Text = "0";
             // 
             // EQ2part1
             // 
@@ -480,7 +486,7 @@
             this.EQ2part1.Name = "EQ2part1";
             this.EQ2part1.Size = new System.Drawing.Size(28, 15);
             this.EQ2part1.TabIndex = 103;
-            this.EQ2part1.Text = "Y+1";
+            this.EQ2part1.Text = "Y+0";
             // 
             // label9
             // 
@@ -518,25 +524,29 @@
             this.EQ2part4.Name = "EQ2part4";
             this.EQ2part4.Size = new System.Drawing.Size(37, 15);
             this.EQ2part4.TabIndex = 106;
-            this.EQ2part4.Text = "(X+1)";
+            this.EQ2part4.Text = "(X+0)";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.Enabled = false;
             this.label36.Location = new System.Drawing.Point(59, 421);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(19, 13);
             this.label36.TabIndex = 18;
             this.label36.Text = "→";
+            this.label36.Visible = false;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
+            this.label37.Enabled = false;
             this.label37.Location = new System.Drawing.Point(59, 458);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(19, 13);
             this.label37.TabIndex = 19;
             this.label37.Text = "→";
+            this.label37.Visible = false;
             // 
             // label5
             // 
