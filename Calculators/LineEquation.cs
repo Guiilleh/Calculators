@@ -13,22 +13,10 @@ namespace Calculators
     public partial class LineEquation : Form
     {
         int Bulbasaur, Charmander, Squirtle, Pikachu = 0;
+        //int a1, a2, a3, a4 = 0;
         public LineEquation()
         {
             InitializeComponent();
-
-            int x0001v2 = Bulbasaur; // Valor de X1
-            int y0001v2 = Charmander; // Valor de Y1
-            int x0002 = Squirtle; // Valor de X2
-            int y0002 = Pikachu; // Valor de Y2
-            int x0001 = Bulbasaur * -1; // * -1
-            int y0001 = Charmander * -1; // * -1
-            int x2x10 = x0002 - x0001v2;
-            int y2y10 = y0002 - y0001v2;
-            int x2x1c = y0001 * x2x10;
-            int y2y1c = x0001 * y2y10;
-            int indepA = x2x1c - y2y1c;
-            int indepB = indepA * -1;
         }
 
         public void MainMethodFirstPart()
@@ -445,6 +433,13 @@ namespace Calculators
                 Divisor.Text = asd1 + "";
             }
         }
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
         #endregion
 
         #region MouseWheel Methods
@@ -548,29 +543,52 @@ namespace Calculators
         {
             MainMLE1();
         }
+        #endregion
+
+        #region Button1 Method
         private void button1_Click(object sender, EventArgs e)
         {
+            int x0001v2 = Bulbasaur; // Valor de X1
+            int y0001v2 = Charmander; // Valor de Y1
+            int x0002 = Squirtle; // Valor de X2
+            int y0002 = Pikachu; // Valor de Y2
+            int x0001 = Bulbasaur * -1; // * -1
+            int y0001 = Charmander * -1*0; // * -1
+            int x2x10 = x0002 - x0001v2;
+            int y2y10 = y0002 - y0001v2;
+            int y2y1c = x0001 * y2y10;
+            int x2x1c = y0001 * x2x10;
+            int indepA = x2x1c - y2y1c;
+            int indepB = indepA * -1;
+            int x03 = y2y10 * -1;
+            int y03 = x2x10;
             int Div = Int32.Parse(Divisor.Text);
-            int x3y46 = (((Charmander * -1) * (Squirtle - Bulbasaur)) - ((Bulbasaur * -1) * (Pikachu - Charmander))) / Div;
-            int xa6 = ((Pikachu - Charmander) * -1) / Div;
-            int ya6 = ((Squirtle - Bulbasaur)) / Div;
-            int x3y47 = ((((Charmander * -1) * (Squirtle - Bulbasaur)) - ((Bulbasaur * -1) * (Pikachu - Charmander))) * -1) / Div;
+            int x3y46 = indepA / Div;
+            int xa6 = x03 / Div;
+            int ya6 = y03 / Div;
+            int x3y47 = indepB / Div;
 
-            if (Bulbasaur == 0 || (Convert.ToInt32(xa6) != Bulbasaur && Convert.ToInt32(xa6) != (Bulbasaur * -1)))
+            //int Div = 1;
+            //int xa6 = 0 / Div;
+            //int ya6 = 2 / Div;
+            //int x3y46 = -10 / Div;
+            //int x3y47 = 10 / Div;
+
+            if (Bulbasaur == 0 || (xa6 != Bulbasaur && xa6 != (Bulbasaur * -1)))
             {
-                Bulbasaur = Convert.ToInt32(xa6);
+                Bulbasaur = xa6;
             }
-            if (Charmander == 0 || (Convert.ToInt32(ya6) != Charmander && Convert.ToInt32(ya6) != (Charmander * -1)))
+            if (Charmander == 0 || (ya6 != Charmander && ya6 != (Charmander * -1)))
             {
-                Charmander = Convert.ToInt32(ya6);
+                Charmander = ya6;
             }
-            if (Squirtle == 0 || (Convert.ToInt32(x3y46) != Squirtle && Convert.ToInt32(x3y46) != (Squirtle * -1)))
+            if (Squirtle == 0 || (x3y46 != Squirtle && x3y46 != (Squirtle * -1)))
             {
-                Squirtle = Convert.ToInt32(x3y46);
+                Squirtle = x3y46;
             }
-            if (Pikachu == 0 || (Convert.ToInt32(x3y47) != Pikachu && Convert.ToInt32(x3y47) != (Pikachu * -1)))
+            if (Pikachu == 0 || (x3y47 != Pikachu && x3y47 != (Pikachu * -1)))
             {
-                Pikachu = Convert.ToInt32(x3y47);
+                Pikachu = x3y47;
             }
             Bulbasaur *= -1;
             Charmander *= -1;
