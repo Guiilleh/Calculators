@@ -64,16 +64,13 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ManifestCertificateThumbprint>2E3A91F5037276C7CE4A32490F549067C8830BDC</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>F69A2D47E6ED9ABF488ECA0878FDF1AF6FA9B6AA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Calculators_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -152,7 +149,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Assembly.cs</LastGenOutput>
     </None>
-    <None Include="Calculators_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

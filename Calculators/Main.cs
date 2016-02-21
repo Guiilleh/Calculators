@@ -59,7 +59,6 @@ namespace Calculators
         }
         private void timer1b_Tick(object sender, EventArgs e)
         {
-            //label1.ForeColor = Color.FromArgb(240, 240, 240, 240);
             int apparitionSpeed = 10;
             label1.ForeColor = Color.FromArgb(label1.ForeColor.R - apparitionSpeed, label1.ForeColor.G - apparitionSpeed, label1.ForeColor.B - apparitionSpeed);
 
@@ -79,7 +78,6 @@ namespace Calculators
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            //label1.ForeColor = Color.FromArgb(10, 10, 10, 10);
             int fadingSpeed = 10;
             label1.ForeColor = Color.FromArgb(label1.ForeColor.R + fadingSpeed, label1.ForeColor.G + fadingSpeed, label1.ForeColor.B + fadingSpeed);
 
