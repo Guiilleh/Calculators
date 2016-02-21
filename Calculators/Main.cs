@@ -59,17 +59,27 @@ namespace Calculators
         }
         private void timer1b_Tick(object sender, EventArgs e)
         {
-            int apparitionSpeed = 10;
-            label1.ForeColor = Color.FromArgb(label1.ForeColor.R - apparitionSpeed, label1.ForeColor.G - apparitionSpeed, label1.ForeColor.B - apparitionSpeed);
-
-            if (label1.ForeColor.R == 10)
+            if (label1.ForeColor.R > 10)
             {
-                timer1.Stop();
-                timer1b.Stop();
-                timer2.Stop();
-                timer1.Enabled = false;
-                timer1b.Enabled = false;
-                timer2.Enabled = false;
+                int apparitionSpeed = 10;
+                label1.ForeColor = Color.FromArgb(
+                    label1.ForeColor.R - apparitionSpeed,
+                    label1.ForeColor.G - apparitionSpeed,
+                    label1.ForeColor.B - apparitionSpeed);
+
+                if (label1.ForeColor.R == 10)
+                {
+                    timer1.Stop();
+                    timer1b.Stop();
+                    timer2.Stop();
+                    timer1.Enabled = false;
+                    timer1b.Enabled = false;
+                    timer2.Enabled = false;
+                }
+            }
+            else
+            {
+                return;
             }
         }
         private void Buttons_MouseHover(object sender, EventArgs e)
@@ -78,19 +88,30 @@ namespace Calculators
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            int fadingSpeed = 10;
-            label1.ForeColor = Color.FromArgb(label1.ForeColor.R + fadingSpeed, label1.ForeColor.G + fadingSpeed, label1.ForeColor.B + fadingSpeed);
-
-            if (label1.ForeColor.R >= this.BackColor.R)
+            if (label1.ForeColor.R < 240)
             {
-                timer1.Stop();
-                label1.ForeColor = this.BackColor;
-                timer1b.Stop();
-                timer2.Stop();
-                timer1.Enabled = false;
-                timer1b.Enabled = false;
-                timer2.Enabled = false;
+                int fadingSpeed = 10;
+                label1.ForeColor = Color.FromArgb(
+                    label1.ForeColor.R + fadingSpeed,
+                    label1.ForeColor.G + fadingSpeed,
+                    label1.ForeColor.B + fadingSpeed);
+
+                if (label1.ForeColor.R >= this.BackColor.R)
+                {
+                    timer1.Stop();
+                    label1.ForeColor = this.BackColor;
+                    timer1b.Stop();
+                    timer2.Stop();
+                    timer1.Enabled = false;
+                    timer1b.Enabled = false;
+                    timer2.Enabled = false;
+                }
             }
+            else
+            {
+                return;
+            }
+            
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -106,7 +127,6 @@ namespace Calculators
             }
         }
         #endregion
-
         
     }
 }

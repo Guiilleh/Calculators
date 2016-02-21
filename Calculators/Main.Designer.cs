@@ -37,6 +37,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1b = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -92,15 +93,23 @@
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // timer1b
-            // 
-            this.timer1b.Interval = 100;
-            this.timer1b.Tick += new System.EventHandler(this.timer1b_Tick);
-            // 
             // timer2
             // 
             this.timer2.Interval = 10;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer1b
+            // 
+            this.timer1b.Tick += new System.EventHandler(this.timer1b_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(100, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
             // 
             // MainForm
             // 
@@ -108,6 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(384, 120);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.test1);
             this.Controls.Add(this.BEquation);
             this.Controls.Add(this.BGrades);
@@ -133,5 +143,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer1b;
+        private System.Windows.Forms.Label label2;
     }
 }
